@@ -33,6 +33,8 @@ public class Solution24 {
         } else {
             System.out.printf("\"%s\" and \"%s\" are not anagrams.", a, b);
         }
+
+        scan.close();
     }
 
 
