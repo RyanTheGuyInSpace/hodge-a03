@@ -24,5 +24,5 @@ run {
 }
 
 application {
-    mainClass = "src/main/java/exercise/Solution24.java"
+    mainClass = "src/main/java/baseline/Solution24.java"
 }

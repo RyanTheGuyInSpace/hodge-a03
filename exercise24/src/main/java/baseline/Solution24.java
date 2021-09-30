@@ -5,6 +5,10 @@
 
 package baseline;
 
+import java.util.Scanner;
+
+import static baseline.AnagramChecker.isAnagram;
+
 public class Solution24 {
     public static void main(String[] args) {
 
@@ -13,18 +17,23 @@ public class Solution24 {
         // Compare the strings to determine whether they are anagrams of each other
         // Print whether the two strings are anagrams or not
 
+        Scanner scan = new Scanner(System.in);
 
+        System.out.println("Enter two strings and I'll tell you if they are anagrams:");
+        System.out.println("Enter the first string: ");
+
+        String a = scan.nextLine();
+
+        System.out.println("Enter the second string:");
+
+        String b = scan.nextLine();
+
+        if (isAnagram(a, b)) {
+            System.out.printf("\"%s\" and \"%s\" are anagrams.", a, b);
+        } else {
+            System.out.printf("\"%s\" and \"%s\" are not anagrams.", a, b);
+        }
     }
 
-    /** Compares two string to determine whether they are anagrams of each other
-     *
-     * @param a First string to compare
-     * @param b Second string to compare
-     * @return True if the two strings are anagrams, false otherwise
-     */
-    public boolean isAnagram(String a, String b) {
 
-
-        return false;
-    }
 }
