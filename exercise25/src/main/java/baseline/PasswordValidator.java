@@ -1,5 +1,7 @@
 package baseline;
 
+import java.util.regex.Pattern;
+
 public class PasswordValidator {
 
     /**
@@ -26,6 +28,80 @@ public class PasswordValidator {
      */
     public static int passwordValidate(String password) {
 
+        // Password is at strong or very strong
+        if (password.length() >= 8) {
+
+            if (hasNumbers(password) && hasLetters(password) && !hasSpecialCharacters(password)) {
+                return PasswordStrength.STRONG;
+            } else if (hasNumbers(password) && hasLetters(password) && hasSpecialCharacters(password)) {
+                return PasswordStrength.VERY_STRONG;
+            }
+
+        } else {
+            // Password is weak or very weak
+            if (isNumbersOnly(password)) {
+                return PasswordStrength.VERY_WEAK;
+            } else if (isLettersOnly(password)) {
+                return PasswordStrength.WEAK;
+            }
+        }
+
         return PasswordStrength.UNKNOWN_STRENGTH;
+    }
+
+    public static boolean isNumbersOnly(String s) {
+        if(Pattern.matches("\\d+", s) && !Pattern.matches("[a-zA-Z]+", s)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean isLettersOnly(String s) {
+        if(Pattern.matches("[a-zA-Z]+", s) && !Pattern.matches("\\d+", s)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean isSpecialCharactersOnly(String s) {
+        if(Pattern.matches("[^a-zA-Z0-9]+", s)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean hasSpecialCharacters(String s) {
+        if (Pattern.matches(".*[^a-zA-Z0-9]+.*", s)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean hasLettersAndNumbers(String s) {
+        if(hasLetters(s) && hasNumbers(s)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean hasLetters(String s) {
+        if(Pattern.matches(".*[a-zA-Z]+.*", s)) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public static boolean hasNumbers(String s) {
+        if(Pattern.matches(".*[0-9]+.*", s)) {
+            return true;
+        }
+
+        return false;
     }
 }
