@@ -9,6 +9,6 @@ public class Finance {
      * years = 72 / rate
      */
     public static int calculateYearsForDoubleROI(int rate) {
-        return -1;
+        return 72 / rate;
     }
 }
