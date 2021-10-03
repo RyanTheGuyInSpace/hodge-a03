@@ -1,0 +1,13 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(‡€Íºÿÿÿÿÿ
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(öíÜƒ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(ö®¼Òýÿÿÿÿ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(‰™ßý
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(·ó¾Ÿÿÿÿÿÿ
+N	java:S106>"9Replace this use of System.out or System.err by a logger.(ºÒóî
+M	java:S106F"9Replace this use of System.out or System.err by a logger.(¥ãÍM
+S	java:S106G"9Replace this use of System.out or System.err by a logger.(ÀúêÙþÿÿÿÿ
+S	java:S106H"9Replace this use of System.out or System.err by a logger.(ðœ‹Ùÿÿÿÿÿ
+U	java:S106K"9Replace this use of System.out or System.err by a logger.(Ã†Ëš8Ëµ¯ÃÄ/
+s	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆžÿÿÿÿÿ
+s	java:S1350"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆžÿÿÿÿÿ
