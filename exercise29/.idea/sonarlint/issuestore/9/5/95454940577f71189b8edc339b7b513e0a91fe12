@@ -1,0 +1,8 @@
+
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¹¥İ½
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Ø—öæıÿÿÿÿ
+N	java:S106""9Replace this use of System.out or System.err by a logger.(‚ığ™
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(Ø—öæıÿÿÿÿ
+Y
+java:S1128"=Remove this unused import 'java.util.InputMismatchException'.(İ§18à¯©»Ä/
+s	java:S135"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ
