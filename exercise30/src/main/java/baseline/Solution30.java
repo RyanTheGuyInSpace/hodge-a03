@@ -8,5 +8,9 @@ package baseline;
 public class Solution30 {
     public static void main(String[] args) {
         // Use a nested loop to generate each line of the multiplication table up to 12
+
+        for (int i = 1; i <= 12; i ++) {
+            System.out.println(MultiplicationTable.printLine(i));
+        }
     }
 }
