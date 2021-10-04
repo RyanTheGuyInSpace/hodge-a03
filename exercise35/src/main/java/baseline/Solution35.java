@@ -5,6 +5,8 @@
 
 package baseline;
 
+import java.util.Scanner;
+
 public class Solution35 {
     public static void main(String[] args) {
         // Loop a prompt for a name until the user leaves the entry blank
@@ -12,6 +14,28 @@ public class Solution35 {
         // When the user leaves the entry blank, stop accepting input and pick a
         // random element from the list
         // Print the random element from the list as the "winner"
+
+        Scanner scan = new Scanner(System.in);
+
+        Winners winners = new Winners();
+
+        String newName;
+
+        while(true) {
+
+            System.out.println("Enter a name: ");
+
+            newName = scan.nextLine();
+
+            if (newName.isEmpty() || newName.isBlank()) {
+                break;
+            }
+
+            winners.addName(newName);
+
+        }
+
+        winners.getWinner();
 
     }
 }
