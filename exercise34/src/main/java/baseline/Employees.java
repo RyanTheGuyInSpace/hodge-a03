@@ -5,20 +5,24 @@
 
 package baseline;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Employees {
-    public String[] employees = {
-            "John Smith",
+    public List<String> employees = new LinkedList<String>(Arrays.asList("John Smith",
             "Jackie Jackson",
             "Chris Jones",
             "Amanda Cullen",
-            "Jeremy Goodwin"
-    };
+            "Jeremy Goodwin"));
 
     /**
-     * Prints all the employees inside of the employees array
+     * Prints all the employees insides the employees array
      */
     public void printEmployees() {
-
+        for (String name : employees) {
+            System.out.println(name);
+        }
     }
 
     /**
@@ -26,6 +30,6 @@ public class Employees {
      * @param employeeName The name of the employee to remove from the employees array.
      */
     public void removeEmployee(String employeeName) {
-
+        this.employees.removeIf(x -> x.equalsIgnoreCase(employeeName));
     }
 }
